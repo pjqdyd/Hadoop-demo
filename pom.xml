@@ -6,7 +6,11 @@
 
     <groupId>com.pjqdyd</groupId>
     <artifactId>Hadoop-demo</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>hadoop-hdfs-java-demo</module>
+    </modules>
 
 
 </project>

@@ -1,8 +1,19 @@
-#### 在docker中安装hadoop集群
+#### 一, 在docker中安装单机hadoop
 
-#### 参考的项目: [github仓库](https://github.com/big-data-europe/docker-hadoop)
+   1. 下载镜像`docker pull sequenceiq/hadoop-docker:latest`
+   
+   2. 启动容器:
+   ```
+    docker run -dit -p 50070:50070 -p 9000:9000 -p 8088:8088 -p 8040:8040 -p 8042:8042  -p 49707:49707  -p 50010:50010  -p 50075:50075  -p 50090:50090 sequenceiq/hadoop-docker:latest /etc/bootstrap.sh -bash   ```
+   ```  
+   3. 启动容器后, 访问http://docker主机ip:50070进入web控制台页面
 
-#### 如何安装:
+<br/><br/>
+#### 二, 在docker中安装hadoop集群
+
+##### 参考的项目: [github仓库](https://github.com/big-data-europe/docker-hadoop)
+
+##### 如何安装:
 
    1. 将本项目中的docker-hadoop文件夹上传到安装docker的主机上
      
@@ -10,7 +21,7 @@
    
    3. 等待镜像下载和容器启动成功后, 访问http://docker主机ip:9870即可进入web控制台
    
-#### 注意:
+##### 注意:
    
    1. 如果在虚拟机中启动, 建议分配4G以上的内存空间保证docker中hadoop集群运行流畅
    
