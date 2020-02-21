@@ -1,4 +1,4 @@
-#### Java 整合使用 Hadoop 的案例项目
+### Java 整合使用 Hadoop 的案例项目
 
 #### 项目依赖:
   JDK 8
