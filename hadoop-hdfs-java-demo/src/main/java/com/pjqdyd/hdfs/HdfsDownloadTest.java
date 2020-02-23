@@ -19,7 +19,7 @@ import java.net.URISyntaxException;
  * @Version:      [v1.0.0]
  */
 
-public class HdfsTest1 {
+public class HdfsDownloadTest {
 
     public static void main(String[] args) throws IOException {
         readFileToLocal("/user/root/input/test.txt");

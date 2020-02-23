@@ -14,7 +14,7 @@ import java.io.IOException;
  * @Version:      [v1.0.0]
  */
 
-public class HdfsTest {
+public class HdfsReadTest {
 
     public static void main(String[] args) throws IOException {
         readFileToConsole("/user/root/input/test.txt");
