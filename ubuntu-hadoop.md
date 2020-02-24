@@ -86,7 +86,7 @@
     
             <property>
                     <name>yarn.nodemanager.resource.memory-mb</name>
-                    <value>2048</value>                                                                                                                                                          </property>
+                    <value>20480</value>                                                                                                                                                          </property>
             </property>
     </configuration>
   ```
