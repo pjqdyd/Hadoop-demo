@@ -28,14 +28,14 @@
    `tar xzvf hadoop-3.2.1.tar.gz`
    
    4.设置HADOOP_HOME路径:
-   `vim /etc/environment`
+   `vim ~/.bashrc`
    
-   在PATH后追加添加:
    ```
-    :/usr/local/hadoop-3.2.1/bin
+    export HADOOP_HOME=/usr/local/hadoop-3.2.1   
+    export PATH=$PATH:$HADOOP_HOME/bin
    ```
    
-   5.使生效: `source /etc/environment`
+   5.使生效: `source ~/.bashrc`
    
    6.修改/usr/local/hadoop-3.2.1/etc/hadoop/hadoop-env.sh文件中的JAVA_HOME变量:
    ```
@@ -90,6 +90,28 @@
             </property>
     </configuration>
   ```
+   修改usr/local/hadoop-3.2.1/etc/hadoop/mapred-site.xml如下:
+    
+   ```xml
+    <configuration>
+       <property>
+               <name>mapreduce.framework.name</name>
+               <value>yarn</value>
+       </property>
+       <property>
+               <name>yarn.app.mapreduce.am.env</name>
+               <value>HADOOP_MAPRED_HOME=${HADOOP_HOME}</value>
+       </property>
+       <property>
+            <name>mapreduce.map.env</name>
+            <value>HADOOP_MAPRED_HOME=${HADOOP_HOME}</value>
+       </property>
+       <property>
+               <name>mapreduce.reduce.env</name>
+               <value>HADOOP_MAPRED_HOME=${HADOOP_HOME}</value>
+       </property>
+    </configuration>
+   ```
 
   11.格式化文件系统:`hdfs namenode -format`
   
