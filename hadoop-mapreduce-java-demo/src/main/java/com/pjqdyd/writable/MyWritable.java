@@ -24,8 +24,9 @@ public class MyWritable implements WritableComparable<MyWritable> {
         this.counter = counter;
     }
 
+    //比较器, 决定排序方式
     public int compareTo(MyWritable myWritable) {
-        return 0;
+        return myWritable.counter - this.counter; //倒序排列
     }
 
     //序列化
