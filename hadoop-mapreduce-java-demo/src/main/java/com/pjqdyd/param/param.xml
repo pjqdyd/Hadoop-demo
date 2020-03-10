@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheel type="text/xsl" href="configuration.xsl" ?>
+
+<configuration>
+
+    <property>
+        <name>mapreduce.input.dir</name>
+        <value>/user/root/input/test.txt</value>
+    </property>
+
+    <property>
+        <name>mapreduce.output.dir</name>
+        <value>/user/root/output</value>
+    </property>
+
+</configuration>
