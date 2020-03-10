@@ -30,6 +30,8 @@ public class ParamDemo {
         //设置一个参数
         conf.set("param1", "this is param1");
 
+        //也可以设置hadoop中xxxx-site.xml等等配置文件中的参数
+
         //2. 获取job对象, 设置job运行的主类
         Job job = Job.getInstance(conf, "param-demo");
         job.setJarByClass(ParamDemo.class);
