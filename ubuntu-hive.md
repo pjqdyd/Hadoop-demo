@@ -13,11 +13,11 @@
    
 4. `source ~/.bashrc`使变量生效
 
-    (这里我们使用了mysql作为hive的metastore独立数据库，所以，在运行hive之前，
-     请确保mysql数据库已经安装并且已启动, 建立一个数据库db_hive)
+    (这里我们使用了Mysql (5.*版本)作为hive的metastore独立元数据数据库，所以，在运行hive之前，
+     请确保mysql数据库已经安装并且已启动, 建立一个存放元数据库db_hive)
 
 5. cd 到/usr/local/apache-hive-3.1.2/conf目录下:
-    新建一个文件`vi hive-site.xml` 配置如下Mysql连接信息:
+    新建一个文件`vi hive-site.xml` 配置如下Mysql连接信息 (Xml文件中不能使用&，要使用他的转义&amp;来代替):
     ```
         <?xml version="1.0" encoding="UTF-8" standalone="no"?>
         <?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
@@ -29,7 +29,7 @@
             </property>
             <property>
                     <name>javax.jdo.option.ConnectionURL</name>
-                    <value>jdbc:mysql://localhost:3306/db_hive</value>
+                    <value>jdbc:mysql://localhost:3306/db_hive?useUnicode=true&amp;characterEncoding=utf-8</value>
             </property>
             <property>
                     <name>javax.jdo.option.ConnectionDriverName</name>                                                                                                                           <value>com.mysql.jdbc.Driver</value>
@@ -54,7 +54,9 @@
    
    7. 拷贝一个mysql-connector-java-5.1.16-bin.jar包到hive的lib目录下.
    
-   8. 保证Hadoop是启动的, 运行命令`hive`可以启动hive
+   8. 初始Hive的元数据到Mysql库中`schematool -dbType mysql -initSchema`
+   
+   9. 保证Hadoop是启动的, 运行命令`hive`可以启动hive
    
    (提示如果出现java.lang.NoSuchMethodError: com.google.common.base.Preconditions.checkArgument
    则表示是因为
