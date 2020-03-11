@@ -21,7 +21,7 @@
 
    3.cd到/usr/local/下下载hadoop:
    ```
-    sudo wget  wgt https://mirrors.cnnic.cn/apache/hadoop/common/hadoop-3.2.1/hadoop-3.2.1.tar.gz
+    sudo wget https://mirrors.cnnic.cn/apache/hadoop/common/hadoop-3.2.1/hadoop-3.2.1.tar.gz
    ```
 
    解压:
