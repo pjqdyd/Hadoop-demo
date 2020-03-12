@@ -1,4 +1,4 @@
-#### Hive创建表相关操作
+#### Hive创建表, 导入数据相关操作
 
 ```
 create table if not exists tb_student(
