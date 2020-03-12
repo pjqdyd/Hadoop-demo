@@ -12,6 +12,7 @@
     <modules>
         <module>hadoop-hdfs-java-demo</module>
         <module>hadoop-mapreduce-java-demo</module>
+        <module>hadoop-hive-java-demo</module>
     </modules>
 
     <properties>

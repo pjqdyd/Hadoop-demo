@@ -13,6 +13,7 @@
  ```
   ├─hadoop-hdfs-java-demo           Java访问hadoop hdfs的模块
   ├─hadoop-mapreduce-java-demo      Java编写hadoop mapreduce的模块
+  ├─hadoop-hive-java-demo           Java操作hadoop hive的模块
   ├─out                             单独打包jar包存放的目录
   ├─docker-hadoop                   Docker中安装Hadoop集群文件目录
   ├─docker-hadoop.md                Docker中安装Hadoop集群说明
