@@ -26,3 +26,19 @@ load data local inpath 'student.txt' into table tb_student;
 
 (该表也会生成在hdfs下的/user/hive/warehouse/db_my.db/tb_student文件中)
 ```   
+
+##### Hive的常用记录格式 (serde): csv, tsv, json RegEx正则, parqut
+serde序列化与反序列化:
+ser: Serializer   de: Deserializer
+
+创建记录为csv格式的表:
+```
+create table if not exists tb_csv(
+    name string,
+    score string
+) 
+row format serde 'org.apache.hadoop.hive.serde2.OpenCSVSerde' 
+stored as textfile;
+```
+加载数据:
+`load data local inpath '/tmp/test.csv' into table tb_csv;`
