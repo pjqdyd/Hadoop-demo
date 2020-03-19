@@ -13,6 +13,7 @@
         <module>hadoop-hdfs-java-demo</module>
         <module>hadoop-mapreduce-java-demo</module>
         <module>hadoop-hive-java-demo</module>
+        <module>hadoop-spark-scala-demo</module>
     </modules>
 
     <properties>
