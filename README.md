@@ -1,4 +1,4 @@
-### Java 整合使用 Hadoop 的案例项目
+### Java 整合使用 Hadoop Hdfs Hive MapReduce Spark 的案例项目
 
 #### 项目依赖:
   JDK 8
@@ -8,6 +8,8 @@
   Hive 3.1.2
   
   Mysql 5.7
+  
+  Spark 3.0.0
 
 #### 项目结构:
  ```
@@ -19,6 +21,7 @@
   ├─docker-hadoop.md                Docker中安装Hadoop集群说明
   ├─ubuntu-hadoop.md                Ubuntu下安装Hadoop说明 (推荐)
   ├─ubuntu-hive.md                  Ubuntu下安装Hive说明 (推荐)
+  ├─ubuntu-spark.md                 Ubuntu下安装Spark说明 (推荐)
   ├─.gitignore                      .gitignore文件
   ├─README.md                       README.md文件
   └─pom.xml                         父pom文件
