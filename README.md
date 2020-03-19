@@ -9,7 +9,7 @@
   
   Mysql 5.7
   
-  Spark 3.0.0
+  Spark 3.0.0-preview
 
 #### 项目结构:
  ```
