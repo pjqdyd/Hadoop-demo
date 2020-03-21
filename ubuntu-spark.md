@@ -24,7 +24,7 @@
  ```
 
    保存后进入spark安装目录下sbin/目录:
-   运行 `./start-all.sh`启动spark
+   运行 `./start-all.sh`启动spark (注意确保ssh本地免密登录已开启, 否则无法启动Worker)
    
    运行`jps`命令即可查看启动的Worker和Master进程
    
